@@ -687,6 +687,27 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@bem-react/classname@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@bem-react/classname/-/classname-1.1.1.tgz#46083d11a8cfaa87d4b2c3793c806248532f0eb6"
+  dependencies:
+    "@bem/sdk.naming.entity.stringify" "1.1.1"
+
+"@bem-react/core@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@bem-react/core/-/core-1.2.0.tgz#fe94734230e9a997b8b8e902fb51fe5c6c83a528"
+  dependencies:
+    "@bem-react/classname" "^1.1.1"
+    object-assign "^4.1.1"
+
+"@bem-react/di@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@bem-react/di/-/di-1.0.3.tgz#f80dcc23ed280ebc16dc2127931cc476204fe4e7"
+
+"@bem/sdk.naming.entity.stringify@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@bem/sdk.naming.entity.stringify/-/sdk.naming.entity.stringify-1.1.1.tgz#4c4defea657350b5c103b3eae1a0ccd773ef12ce"
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -6695,7 +6716,7 @@ react-dev-utils@^6.1.1:
     strip-ansi "4.0.0"
     text-table "0.2.0"
 
-react-dom@16.6.1:
+react-dom@^16.6.1:
   version "16.6.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.6.1.tgz#5476e08694ae504ae385a28b62ecc4fe3a29add9"
   dependencies:
@@ -6762,7 +6783,7 @@ react-scripts@2.1.1:
   optionalDependencies:
     fsevents "1.2.4"
 
-react@16.6.1:
+react@^16.6.1:
   version "16.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.6.1.tgz#ee2aef4f0a09e494594882029821049772f915fe"
   dependencies:
