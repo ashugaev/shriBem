@@ -1,0 +1,47 @@
+@import './styles/variables.scss';
+
+body {
+    padding: 0 40px;
+    margin: 0;
+}
+
+.mainContainer {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    &__header {
+        font-size: 36px;
+        font-weight: 600;
+        margin: 32px 0;
+    }
+}
+
+* {
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: $bp-one) {
+    body {
+        padding: 0 20px;
+    }
+
+    // Адиаптивный шрифты
+    .mainContainer {
+        &__header {
+            font-size: calc(24px + (36 - 24) * (100vw - 376px) / (650 - 376));
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .mainContainer {
+        &__header {
+            font-size: 24px !important;
+        }
+    }
+}

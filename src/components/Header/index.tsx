@@ -1,12 +1,7 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
+import './index.scss'
 
-import {
-  compose,
-  IClassNameProps,
-  widthBemClassName,
-  withBemMod
-} from "@bem-react/core";
 
 const cat = cn("Cat");
 cat({ size: "m" });
@@ -15,7 +10,7 @@ cat("Tail", { length: "long" });
 
 const dogPaw = cn("Dog", "Paw");
 
-const header = ({ dogPaw }) => {
+const Header = () => {
   return (
     <>
       <div
@@ -54,6 +49,6 @@ const header = ({ dogPaw }) => {
   );
 };
 
-const Header = widthBemClassName(header)(dogPaw);
+// const Header = widthBemClassName(header)(dogPaw);
 
 export default Header;

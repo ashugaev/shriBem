@@ -1,6 +1,9 @@
 import React from "react";
-import Header from "./Header.jsx";
+import Header from "./Header/index.tsx";
 import ElementsBox from "./ElementsBox";
+import Footer from "./Footer/index.tsx";
+import "./styles/main.scss";
+import "./MainContainer.scss";
 
 function Body() {
   return (
@@ -10,6 +13,7 @@ function Body() {
         <div class="mainContainer__header">Лента событий</div>
         <ElementsBox />
       </div>
+      <Footer />
     </>
   );
 }
