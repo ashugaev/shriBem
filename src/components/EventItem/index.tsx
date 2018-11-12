@@ -8,6 +8,7 @@ import ItemImage from "./ItemImage/index.tsx";
 import "./index.scss";
 
 export const cnEventItem = cn("eventItem");
+export const cnIcon = cn("icon");
 
 function EventItem({ event }) {
   let dataType = event.data && Object.keys(event.data).length ? event.data : {};
@@ -31,23 +32,24 @@ function EventItem({ event }) {
       })}
     >
       <div
-        className={`icon icon_cross${
-          event.type === "critical" ? "_white" : ""
-        } eventItem-cross`}
+        className={cnIcon(
+          { cross: event.type === "critical" ? "white" : true },
+          ["eventItem-cross"]
+        )}
       />
 
       <div className={cnEventItem("arrowBox")}>
-        <div className="icon icon_next eventItem-arrow" />
+        <div className={cnIcon({ next: true }, ["eventItem-arrow"])} />
       </div>
 
-      <div className="eventItem-mainInfoBox">
-        <div className="eventItem-header">
+      <div className={cnEventItem("mainInfoBox")}>
+        <div className={cnEventItem("header")}>
           <div
             className={`eventItem-icon icon icon_${event.icon}${
               event.type === "critical" ? "_white" : ""
             }`}
           />
-          <div className="eventItem-title">
+          <div className={cnEventItem("title")}>
             <span id={event.title} />
           </div>
         </div>
