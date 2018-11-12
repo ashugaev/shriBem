@@ -47,38 +47,32 @@ function EventItem({ event }) {
               event.type === "critical" ? "_white" : ""
             }`}
           />
-
           <div className="eventItem-title">
             <span id={event.title} />
           </div>
         </div>
-
         <div className={cnEventItem("infoBox")}>
           <div className={cnEventItem("source")}>{event.source}</div>
           <div className={cnEventItem("time")}> {event.time}</div>
         </div>
-
-        {(event.description || event.data) && (
-          <div
-            className={cnEventItem("descriptionBox", { oneRow: !event.data })}
-          >
-            <div className={cnEventItem("description")}>
-              {event.description}
-            </div>
-            <div className="eventItem-dataBox" />
-
-            {dataType.type === "graph" && <Graph />}
-            {(temperature || humidity) && (
-              <Conditions temperature={temperature} humidity={humidity} />
-            )}
-            {track && (
-              <Player track={track} volume={volume} albumcover={albumcover} />
-            )}
-            {buttons && <BtnYesNo buttons={buttons} />}
-            {image && <ItemImage />}
-          </div>
-        )}
       </div>
+
+      {(event.description || event.data) && (
+        <div className={cnEventItem("descriptionBox", { oneRow: !event.data })}>
+          <div className={cnEventItem("description")}>{event.description}</div>
+          <div className="eventItem-dataBox" />
+
+          {dataType.type === "graph" && <Graph />}
+          {(temperature || humidity) && (
+            <Conditions temperature={temperature} humidity={humidity} />
+          )}
+          {track && (
+            <Player track={track} volume={volume} albumcover={albumcover} />
+          )}
+          {buttons && <BtnYesNo buttons={buttons} />}
+          {image && <ItemImage />}
+        </div>
+      )}
     </div>
   );
 }
