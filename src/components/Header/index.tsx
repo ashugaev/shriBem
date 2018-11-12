@@ -1,48 +1,35 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
-import './index.scss'
+import "./index.scss";
 
-
-const cat = cn("Cat");
-cat({ size: "m" });
-cat("Tail");
-cat("Tail", { length: "long" });
-
-const dogPaw = cn("Dog", "Paw");
+export const cnHeader = cn("header");
+export const cnIcon = cn("icon");
 
 const Header = () => {
   return (
     <>
-      <div
-        className={`header ${cat()} ${dogPaw({
-          size: "superbig",
-          beautiness: "ugly"
-        })} ${dogPaw({
-          color: "black",
-          exist: true
-        })}`}
-      >
-        <div class="icon header__logo" />
-        <ul class="header__menu">
-          <li class="header__menu-item header__menu-item_active">
+      <div className={cnHeader()}>
+        <div className={cnHeader("logo", ["icon"])} />
+        <ul className={cnHeader("menu")}>
+          <li className="header-menuItem header-menuItem_active">
             <a href="">События</a>
           </li>
-          <li class="header__menu-item">
+          <li className={cnHeader("menuItem")}>
             <a href="">Сводка</a>
           </li>
-          <li class="header__menu-item">
+          <li className={cnHeader("menuItem")}>
             <a href="">Устройства</a>
           </li>
-          <li class="header__menu-item">
+          <li className={cnHeader("menuItem")}>
             <a href="">Сценарии</a>
           </li>
-          <li class="header__menu-item">
+          <li className={cnHeader("menuItem")}>
             <a href="/cameras">Видеонаблюдение</a>
           </li>
         </ul>
         <label
           for="menu-buton-chb"
-          class="icon icon_hamburger header__menu-button"
+          className={cnIcon({ hemburger: true, "menu-button": true })}
         />
       </div>
     </>
