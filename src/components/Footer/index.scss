@@ -9,14 +9,14 @@
     align-items: center;
     padding: 25px 0;
 
-    &__menu {
+    &-menu {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
 
 
-    &__menu-item {
+    &-menuItem {
         &:not(:first-child) {
             margin-left: 15px;
             white-space: nowrap;
@@ -29,7 +29,7 @@
         }
     }
 
-    &__copy {
+    &-copy {
         color: $col-gray;
         white-space: nowrap;
         margin-top: 10px;
