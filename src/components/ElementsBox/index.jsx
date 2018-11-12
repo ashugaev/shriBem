@@ -6,7 +6,7 @@ import "./index.scss";
 function ElementsBox() {
   console.log(events);
   return (
-    <div className="ElementsBox">
+    <div className="elementsBox">
       {events.events.map((event, index) => (
         <EventItem event={event} key={index} />
       ))}
