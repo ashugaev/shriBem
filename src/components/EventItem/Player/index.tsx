@@ -1,7 +1,8 @@
 import React from "react";
+import { withBemMod } from '@bem-react/core';
 import "./index.scss";
 
-function Player({ track, albumcover, volume }) {
+function player(Base, { track, albumcover, volume }) {
   return (
     <div className="itemPlayer">
       <div className="itemPlayer__trackInfo">
@@ -28,4 +29,5 @@ function Player({ track, albumcover, volume }) {
   );
 }
 
+const Player = withBemMod('player', {contentType: 'player'}, player)
 export default Player;

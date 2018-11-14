@@ -33,6 +33,8 @@ function EventItem({ event }) {
     contentType = "graph";
   } else if (buttons) {
     contentType = "buttons";
+  } else if (track) {
+    contentType = "player";
   }
 
   return (
@@ -79,13 +81,13 @@ function EventItem({ event }) {
           {(temperature || humidity) && (
             <Conditions temperature={temperature} humidity={humidity} />
           )}
-          {track && (
+          {/* {track && (
             <Player track={track} volume={volume} albumcover={albumcover} />
-          )}
+          )} */}
           {/* {buttons && <BtnYesNo buttons={buttons} />} */}
           {/* {image && <ItemImage />} */}
 
-          <ItemContent buttons={buttons} contentType={contentType} />
+          <ItemContent buttons={buttons} track={track} volume={volume} albumcover={albumcover} contentType={contentType} />
         </div>
       )}
     </div>
