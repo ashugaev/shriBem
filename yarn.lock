@@ -1489,6 +1489,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bellajs@7.x.x:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/bellajs/-/bellajs-7.5.0.tgz#797c408dc05ea13a1e01dc1ca737498e234a9099"
+
 bfj@6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/bfj/-/bfj-6.1.1.tgz#05a3b7784fbd72cfa3c22e56002ef99336516c48"
@@ -2590,6 +2594,12 @@ detect-port-alt@1.1.6:
   dependencies:
     address "^1.0.1"
     debug "^2.6.0"
+
+device-detector@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/device-detector/-/device-detector-1.0.2.tgz#ab7c1ac6ce740a85726dd297e2e1d3a4cfa9ac3d"
+  dependencies:
+    bellajs "7.x.x"
 
 diff@^3.2.0:
   version "3.5.0"

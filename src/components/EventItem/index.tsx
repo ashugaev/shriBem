@@ -78,17 +78,6 @@ function EventItem({ event }) {
         <div className={cnEventItem("descriptionBox", { oneRow: !event.data })}>
           <div className={cnEventItem("description")}>{event.description}</div>
           <div className="eventItem-dataBox" />
-
-          {/* {dataType.type === "graph" && <Graph />} */}
-          {/* {(temperature || humidity) && (
-            <Conditions temperature={temperature} humidity={humidity} />
-          )} */}
-          {/* {track && (
-            <Player track={track} volume={volume} albumcover={albumcover} />
-          )} */}
-          {/* {buttons && <BtnYesNo buttons={buttons} />} */}
-          {/* {image && <ItemImage />} */}
-
           <ItemContent
             temperature={temperature}
             humidity={humidity}
