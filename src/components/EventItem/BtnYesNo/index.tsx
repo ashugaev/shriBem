@@ -1,7 +1,8 @@
 import React from "react";
+import { withBemMod } from '@bem-react/core';
 import "./index.scss";
 
-function BtnYesNo({ buttons }) {
+function btnYesNo(Base, { buttons }) {
   return (
     <div className="buttonsYesNo">
       <button className="btn btn_yellow buttonsYesNo__yes">{buttons[0]}</button>
@@ -10,4 +11,5 @@ function BtnYesNo({ buttons }) {
   );
 }
 
+const BtnYesNo = withBemMod('buttons', {contentType: 'buttons'}, btnYesNo)
 export default BtnYesNo;

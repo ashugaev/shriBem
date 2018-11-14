@@ -31,6 +31,8 @@ function EventItem({ event }) {
     contentType = "image";
   } else if (dataType.type === "graph") {
     contentType = "graph";
+  } else if (buttons) {
+    contentType = "buttons";
   }
 
   return (
@@ -80,10 +82,10 @@ function EventItem({ event }) {
           {track && (
             <Player track={track} volume={volume} albumcover={albumcover} />
           )}
-          {buttons && <BtnYesNo buttons={buttons} />}
+          {/* {buttons && <BtnYesNo buttons={buttons} />} */}
           {/* {image && <ItemImage />} */}
 
-          <ItemContent contentType={contentType} />
+          <ItemContent buttons={buttons} contentType={contentType} />
         </div>
       )}
     </div>

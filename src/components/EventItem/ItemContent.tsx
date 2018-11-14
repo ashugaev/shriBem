@@ -6,5 +6,5 @@ import Player from "./Player/index.tsx";
 import BtnYesNo from "./BtnYesNo/index.tsx";
 import ItemImage from "./ItemImage/index.tsx";
 
-const ItemContent = compose(ItemImage, Graph)(()=><div/>)
+const ItemContent = compose(ItemImage, Graph, BtnYesNo)(()=><div/>)
 export default ItemContent
