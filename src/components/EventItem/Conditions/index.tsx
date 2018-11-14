@@ -1,7 +1,8 @@
 import React from "react";
+import { withBemMod } from '@bem-react/core';
 import "./index.scss";
 
-function Conditions({ temperature, humidity }) {
+function conditions(Base, { temperature, humidity }) {
   return (
     <div className="itemConditions">
       {typeof temperature === "number" && (
@@ -20,4 +21,5 @@ function Conditions({ temperature, humidity }) {
   );
 }
 
+const Conditions = withBemMod('conditions', {contentType: 'conditions'}, conditions)
 export default Conditions;

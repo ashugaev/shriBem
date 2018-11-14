@@ -35,6 +35,8 @@ function EventItem({ event }) {
     contentType = "buttons";
   } else if (track) {
     contentType = "player";
+  } else if (temperature || humidity) {
+    contentType = "conditions";
   }
 
   return (
@@ -78,16 +80,24 @@ function EventItem({ event }) {
           <div className="eventItem-dataBox" />
 
           {/* {dataType.type === "graph" && <Graph />} */}
-          {(temperature || humidity) && (
+          {/* {(temperature || humidity) && (
             <Conditions temperature={temperature} humidity={humidity} />
-          )}
+          )} */}
           {/* {track && (
             <Player track={track} volume={volume} albumcover={albumcover} />
           )} */}
           {/* {buttons && <BtnYesNo buttons={buttons} />} */}
           {/* {image && <ItemImage />} */}
 
-          <ItemContent buttons={buttons} track={track} volume={volume} albumcover={albumcover} contentType={contentType} />
+          <ItemContent
+            temperature={temperature}
+            humidity={humidity}
+            buttons={buttons}
+            track={track}
+            volume={volume}
+            albumcover={albumcover}
+            contentType={contentType}
+          />
         </div>
       )}
     </div>
