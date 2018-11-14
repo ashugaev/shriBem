@@ -5,6 +5,7 @@ import Conditions from "./Conditions/index.tsx";
 import Player from "./Player/index.tsx";
 import BtnYesNo from "./BtnYesNo/index.tsx";
 import ItemImage from "./ItemImage/index.tsx";
+import ItemContent from "./ItemContent.tsx";
 import "./index.scss";
 
 export const cnEventItem = cn("eventItem");
@@ -23,6 +24,14 @@ function EventItem({ event }) {
     track,
     volume
   } = dataType;
+
+  let contentType;
+
+  if (image) {
+    contentType = "image";
+  } else if (dataType.type === "graph") {
+    contentType = "graph";
+  }
 
   return (
     <div
@@ -64,7 +73,7 @@ function EventItem({ event }) {
           <div className={cnEventItem("description")}>{event.description}</div>
           <div className="eventItem-dataBox" />
 
-          {dataType.type === "graph" && <Graph />}
+          {/* {dataType.type === "graph" && <Graph />} */}
           {(temperature || humidity) && (
             <Conditions temperature={temperature} humidity={humidity} />
           )}
@@ -72,7 +81,9 @@ function EventItem({ event }) {
             <Player track={track} volume={volume} albumcover={albumcover} />
           )}
           {buttons && <BtnYesNo buttons={buttons} />}
-          {image && <ItemImage />}
+          {/* {image && <ItemImage />} */}
+
+          <ItemContent contentType={contentType} />
         </div>
       )}
     </div>

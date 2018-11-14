@@ -1,4 +1,5 @@
 import React from "react";
+import { withBemMod } from '@bem-react/core';
 import "./index.scss";
 
 function ItemImage({ img }) {
@@ -9,4 +10,5 @@ function ItemImage({ img }) {
   );
 }
 
-export default ItemImage;
+const ThreeWidthBem = withBemMod('image', {contentType: 'image'}, ItemImage)
+export default ThreeWidthBem;
